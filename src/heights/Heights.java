@@ -29,6 +29,8 @@ public class Heights {
         
         heights = new double [numStudents];
         
+        //Gather input from the user the height of each student and store
+        //in height array.
         for(int i = 0; i < numStudents; i++){
             
             System.out.println("Enter the height: ");
@@ -38,6 +40,7 @@ public class Heights {
         
         double maxHeight = heights[0];
         
+        //Determine the largest height value within the array of heights
         for(int i = 0; i < heights.length; i++){
             
             if (maxHeight < heights[i])
@@ -46,11 +49,13 @@ public class Heights {
         }
         
         double total =0;
+        //Accumulate the total values of all the heights in the array.
         for(int i = 0; i < heights.length; i++){
             
             total += heights[i];
         }
         
+        //print out the results if tallest value and the average height value.
         System.out.println("The tallest student is: " + maxHeight + " inches");
         System.out.println("The average height of all the students is: "
                 + (total/numStudents) + " inches");
